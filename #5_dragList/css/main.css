@@ -1,0 +1,26 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	max-width:1000px;
+	margin:50px auto;
+}
+
+.dragList{
+	~width:500px;
+	list-style:none;
+	display: block;
+}
+.dragList li {
+	display: block;
+	padding:15px;
+	background:#CE002E;
+	color:#fff;
+	margin-bottom:10px;
+}
+.dragList li:last-child{
+	margin-bottom: 0px;
+}

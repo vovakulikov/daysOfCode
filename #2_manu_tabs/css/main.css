@@ -1,0 +1,147 @@
+@font-face {
+    font-family: OpenSans; /* Имя шрифта */
+    src: url(../fonts/OpenSans-Regular.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: OpenSansBold; /* Имя шрифта */
+    src: url(../fonts/OpenSans-Bold.ttf); /* Путь к файлу со шрифтом */
+   }
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.nav_tabs_container{
+	padding:0px 16px;
+	margin-top: 40px;
+}
+.nav_tabs{
+	max-width: 980px;
+	margin:0 auto;
+}
+.nav_tabs:after{
+	content:'';
+	display: table;
+	clear: both;
+}
+
+.nav_tabs_column{
+	width:20%;
+	float: left;
+	z-index: 1;
+}
+.nav_tabs_input{
+	display: none;
+}
+.nav_tavs_column_section{
+	width:100%;
+	float: left;
+	position: relative;
+}
+.nav_tabs_column_section ~ .nav_tabs_column_section{
+	padding-top: 20px;
+}
+.nav_tabs_label_h{
+	font-size: 12px;
+	line-height: 1.667;
+	font-family: Open Sans;
+	z-index: 2;
+	position: relative;
+	background: #fff;
+	padding-right: 15px;
+}
+.nav_tabs_column_section_list{
+	margin-right: 20px;
+	list-style: none;
+	padding:0;
+}
+.nav_tabs_column_section_item{
+	display: block;
+	pointer-events: auto;
+	line-height: 20px;
+}
+.nav_tabs a{
+	text-decoration: none;
+	color:#666;
+	font-size: 12px;
+	font-family: Open Sans;
+}
+.nav_tabs a:hover{
+	color:#000;
+	text-decoration: underline;
+}
+
+.nav_tabs_input:checked + .nav_tabs_column_section .nav_tabs_label_h{
+	font-weight: 600;
+    color: #333;
+}
+.nav_tabs_input:checked + .nav_tabs_column_section .nav_tabs_label_h:after{
+	transform: rotate(45deg) scale(1.08);
+}
+.nav_tabs_input:checked + .nav_tabs_column_section .nav_tabs_column_section_list{
+	position: static;
+    visibility: visible;
+    z-index: 1;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+}
+
+
+@media only screen and (max-width: 767px){
+	.nav_tabs{
+		font-size: 12px;
+    	line-height: 2.5;
+    	font-weight: 400;
+	}
+	.nav_tabs_column{
+		width:100%;
+	}
+	.nav_tabs_column_section{
+		border-bottom: 1px solid #e3e3e3;
+	    overflow: hidden;
+	    padding-top: 0px !important;
+	    pointer-events: auto;
+	}
+	.nav_tabs_label_h{
+	    cursor: pointer;
+	    position: relative;
+	    -webkit-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	    z-index: 2;
+	    font-size: 14px;
+	    line-height: 2.78571;
+	    font-weight: 400;
+	    letter-spacing: normal;
+
+	}
+	.nav_tabs_label_h:after{
+		content: '+';
+	    float: right;
+	    font-weight: normal;
+	    margin-right: 8px;
+	    -webkit-transition: -webkit-transform .3s ease;
+	    transition: transform .3s ease;
+	}
+	.nav_tabs_column_section_list{
+	    margin: 0;
+	    overflow: hidden;
+	    padding-bottom: 16px;
+	    position: absolute;
+	    top: 100%;
+	    left: 0;
+	    width: 100%;
+	    visibility: hidden;
+	    z-index: -1;
+	    -webkit-transform: translateY(-100px);
+	    transform: translateY(-100px);
+	    padding-left: 20px;
+	}
+	.nav_tabs_column_section_item{
+		line-height: 30px;
+	}
+}
+

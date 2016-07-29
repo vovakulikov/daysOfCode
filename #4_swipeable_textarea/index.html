@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swipeable_texarea</title>
+  <link rel="stylesheet" href="css/main.css">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <meta content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width" name="viewport">
+</head>
+<body>
+
+    <h1>A new era of text entry in the textarea field</h1>
+ <div class="info_block"> 
+       <p>
+            Это обычное текстовое поле для ввода информации, к которому мы все так привыкли, но есть пару деталей, которые тебе следует знать. 
+            А именно
+      </p>
+      <ul>
+            <li>Для полного удаление содержимого поля просто свайпни блок влево или же нажми кнопку delete в верхнем правом углу</li>
+            <li>Ага, удалять мы можем, но это поле умное, мы еще можем и вернуть все, что наудаляли. Просто свайпни вправо и вернется последняя удаленная запись. Поле хранит все записи, тобой удаленные. Можешь свайпать сколько хочешь, если нужна будет первая запись, а ты уже понаудалял кучу всего</li>
+          </ul>
+    </div>
+    <form action="" class="forma">
+         <div class="swipe_textarea_form swipe_textarea_container">
+             <div class="swipe_textarea_innerBlock">
+               <textarea name="" class="swipe_textarea"></textarea> 
+               <button type='reset' class="swipe_textarea_button_clear">
+                   <span>+</span>
+               </button>
+               <div class="ramka" tabindex="-1"></div>
+             </div> 
+         </div> 
+         <!--<button tupe='submit'>Отправить</button>-->
+    </form>
+
+<script src="js/_swipe_textarea.js"></script>
+</body>
+</html>
